@@ -29,7 +29,7 @@ async function setupNodeEvents(
     );
   };
 
-  const environment = config.env.configFile || "development";
+  const environment = config.env.configFile || "paper";
   const configurationForEnvironment = fetchConfigurationByFile(environment);
 
   return configurationForEnvironment || config;

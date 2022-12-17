@@ -1,6 +1,6 @@
 # CypressPaperID
 
-WEB UI automation test for gudangada
+WEB UI automation test for Paper.id
 <br>
 
 ## 1. About Cypress

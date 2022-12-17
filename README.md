@@ -1,4 +1,4 @@
-# qe-test-web
+# CypressPaperID
 
 WEB UI automation test for gudangada
 <br>
@@ -34,7 +34,7 @@ Everything about Cypress can be read in [Cypress Documentation](https://docs.cyp
 Make sure you are at the project repository
 
 ```
-cd /path/qe-test-web
+cd /path/CypressPaperID
 ```
 
 Install dependencies and necessary setup.

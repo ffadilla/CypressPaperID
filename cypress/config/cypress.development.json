@@ -1,0 +1,13 @@
+{
+  
+  "paper": {
+    "baseUrl": "https://paper.id/",
+    "baseApiUrl": "https://api.paper.id/api/",
+    "kandidat": {
+        "email": "kandidat@paper.id",
+        "password": "jakarta123",
+        "ttl": 31104000
+    }
+  },
+  "watchForFileChanges": false
+}

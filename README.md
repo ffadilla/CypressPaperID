@@ -3,72 +3,48 @@
 WEB UI automation test for Paper.id
 <br>
 
-## 1. About Cypress
+# Test Strategy
 
-Everything about Cypress can be read in [Cypress Documentation](https://docs.cypress.io/guides), including the functions you can use to implement your test.
-<br>
+   1. Manual Test
+      1. Feature Test: to deep-test each feature and interaction (human-system, system-system)
+      2. Functional test for end to end test cases 
+      3. Exploratory test for integration tests with others menu
+   
+   2. Automation Test
+      1. Sanity Test on staging: to simulate deployment to production and to ensure no issue
+      
+# Test Plan
+1. Create & Verify invoice design and content on every page
+2. Verify while user is able to edit or delete invoice
+3. Verify invoice correctness when status = Unpaid
+4. Verify invoice correctness when status = Paid
+5. Verify invoice correctness when status = Overdue
+6. Verify when user upload correct logo format
+7. Verify when user upload an invalid logo format
+8. Verify when user type custom invoice number while invoice is submitted
+9. Verify when user create invoice with custom product
+10. Verify when user create invoice with curated product
+11. Verify User should able to sent & download Invoice
+12. Create and verify when user add new mitra while invoice creation
+13. Verify all mandatory input while user create invoice
+14. Upload & verify when user upload sign then sign format is not acceptable
+15. Verify sent invoice behavior via email address, whatsapp and messages text
+16. Verify behavior when download then no internet connection should display error notification
+17. Verify behavior when sent then no internet connection should display error notification
+18. Verify behavior when download then server error connection should display error notification
+19. Verify behavior when sent then server error connection should display error notification
+20. Verify when the order has adjustment then it will be update on invoice PDF as well
+21. Verify when user click save and sent invoice behavior
+22. Verify when user click save and confirmed invoice behavior
+23. Verify when user click save as draft behavior
+24. Verify price summary when user add product then input qty & price
+25. Verify total price section when user input delivery price & additional discount
+26. Create and verify delivery product behavior
+27. Verify invoice design and content when user sent invoice via email, wa & message text:
+      1. Reference ID, Date, Due Date
+      2. Size & Logo Position
+      3. Penjual Name, address, phone * email
+      4. Customer name, phone & email
+      5. Product details & price Details
 
-## 2. Development Requirement
 
-### Mac OSX
-
-1. Install Homebrew:
-
-```
-/bin/bash -c "$(curl -fs https://raw.githubusercontent.com/Homebrew/install/master/install.sh)
-```
-
-2. Install Node JS: There are 3 main ways to install Node.js:
-
-   1. Using the [volta.sh](https://volta.sh/), this will automatically install the Node.js version when you visit the repo.
-   2. Using the [NVM](https://github.com/nvm-sh/nvm), install it and choose node version 16.16.
-   3. Manually install Node.js
-      1. Go to the Node.js Downloads page https://nodejs.org/en/download/
-      2. Download Node.js for macOS by clicking the "Macintosh Installer" option
-      3. Run the downloaded Node.js .pkg Installer
-      4. Run the installer, including accepting the license, selecting the destination, and authenticating for the install.
-      5. You're finished! To ensure Node.js has been installed, run node -v in your terminal - you should get something like v6.9.4
-
-3. Install Cypress:
-
-Make sure you are at the project repository
-
-```
-cd /path/CypressPaperID
-```
-
-Install dependencies and necessary setup.
-
-```
-npm install
-```
-
-4. Install cucumber-json-formatter:
-
-Download and install the [cucumber JSON fomatter](https://github.com/cucumber/json-formatter) depending on your OS
-
-## 3. Open and Run Cypress
-
-Open cypress using
-
-```
-npx cypress open --env configFile={staging|development|production}
-```
-
-Run scenarios using
-
-```
-npx cypress run --env configFile={staging|development|production} --spec [specific feature file]
-```
-
-Run scenarios in a folder
-
-```
-npx cypress run --env configFile={staging|development|production} --spec cypress/e2e/paper/features
-```
-
-Generate cucumber html report using
-
-```
-npm run report:generate
-```

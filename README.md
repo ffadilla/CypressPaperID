@@ -64,7 +64,7 @@ npx cypress run --env configFile={staging|development|production} --spec [specif
 Run scenarios in a folder
 
 ```
-npx cypress run --env configFile={staging|development|production} --spec cypress/e2e/google/features
+npx cypress run --env configFile={staging|development|production} --spec cypress/e2e/paper/features
 ```
 
 Generate cucumber html report using
